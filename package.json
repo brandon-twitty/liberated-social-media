@@ -26,6 +26,7 @@
     "@ionic/angular": "^5.0.0",
     "@ionic/pwa-elements": "^3.0.0",
     "capacitor": "^0.5.5",
+    "cordova-plugin-ionic": "5.4.7",
     "rxjs": "~6.5.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
