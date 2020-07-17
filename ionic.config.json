@@ -1,6 +1,8 @@
 {
   "name": "liberated-kind",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular",
   "id": "c50b9ec1"
 }
