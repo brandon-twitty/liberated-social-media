@@ -1,0 +1,24 @@
+/*
+ * Load Dark/Light theme
+ */
+
+@import "src/theme/essential/variables";
+@import "src/theme/essential/core";
+@import "src/theme/essential/rubik";
+@import "src/theme/essential/segment-clear";
+@import "src/theme/essential/grid";
+@import "src/theme/essential/segment-bordered";
+@import "src/theme/essential/header-logo-centered";
+@import "src/theme/essential/list";
+@import "src/theme/essential/list-square";
+@import "src/theme/essential/list-condensed";
+@import "src/theme/essential/list-colored";
+@import "src/theme/essential/list-ordered";
+@import "src/theme/essential/list-item-start-buttons-end";
+@import "src/theme/essential/payment-cards";
+@import "src/theme/essential/product-tile";
+@import "src/theme/essential/collapsible-list-with-divider";
+@import "src/theme/essential/icon";
+
+@import "src/theme/essential/theme-light";
+// @import "./theme-dark";

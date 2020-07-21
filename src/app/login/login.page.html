@@ -1,10 +1,41 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Sign in User</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <iframe src="https://theliberatedkind.auth.us-east-2.amazoncognito.com/login?client_id=3n9jd601n9lah0c8f3e9t2adop&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=https://liberated-kind.web.app/" title="Registration Flow"></iframe>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="text" #email required></ion-input>
+    </ion-item>
 
+    <ion-item lines="full">
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" #password required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" (click)="logIn(email, password)" expand="block">Login</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  <form>
+    <ion-row>
+      <ion-col>
+        <ion-button
+                type="submit"
+                color="danger"
+                (click)="authService.GoogleAuth()"
+                expand="block">
+          Login with Google
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
 </ion-content>
