@@ -3,8 +3,28 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule } from '@angular/router';
 const routes = [
     {
-        path: '',
+        path: 'tabs',
         loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    },
+    {
+        path: '',
+        loadChildren: () => import('./login/login.module').then(m => m.LoginPageModule)
+    },
+    {
+        path: 'profile',
+        loadChildren: () => import('./profile/profile.module').then(m => m.ProfilePageModule)
+    },
+    {
+        path: 'registration',
+        loadChildren: () => import('./registration/registration.module').then(m => m.RegistrationPageModule)
+    },
+    {
+        path: 'verify-email',
+        loadChildren: () => import('./verify-email/verify-email.module').then(m => m.VerifyEmailPageModule)
+    },
+    {
+        path: 'dashboard',
+        loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardPageModule)
     }
 ];
 let AppRoutingModule = class AppRoutingModule {

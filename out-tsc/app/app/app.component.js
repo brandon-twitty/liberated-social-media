@@ -5,6 +5,7 @@ let AppComponent = class AppComponent {
         this.platform = platform;
         this.splashScreen = splashScreen;
         this.statusBar = statusBar;
+        this.sideMenu();
         this.initializeApp();
     }
     initializeApp() {
@@ -12,6 +13,40 @@ let AppComponent = class AppComponent {
             this.statusBar.styleDefault();
             this.splashScreen.hide();
         });
+    }
+    sideMenu() {
+        this.navigate = [
+            {
+                title: 'Detailed Profile',
+                url: '/detailed-profile',
+                icon: 'person-remove-outline'
+            },
+            {
+                title: 'Dashboard',
+                url: '/dashboard',
+                icon: 'home'
+            },
+            {
+                title: 'Create Profile',
+                url: '/create-profile',
+                icon: 'home'
+            },
+            {
+                title: 'Order Cards',
+                url: '/create-cards',
+                icon: 'barcode-outline'
+            },
+            {
+                title: 'My Connections',
+                url: '/my-connections',
+                icon: 'contacts'
+            },
+            {
+                title: 'Login',
+                url: '/register',
+                icon: 'home'
+            },
+        ];
     }
 };
 AppComponent = __decorate([

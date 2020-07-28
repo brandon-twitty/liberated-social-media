@@ -1,20 +1,20 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header style="background-color: black; color: white;">
+  <!--<ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>Register User</ion-title>
-  </ion-toolbar>
+  </ion-toolbar>-->
 </ion-header>
 
-<ion-content>
-  <form>
-    <ion-item lines="full">
+<ion-content class="reg-input">
+<form style="padding-top:125px;">
+    <ion-item lines="full" class="reg-input">
       <ion-label position="floating">Email</ion-label>
       <ion-input type="text" #email required></ion-input>
     </ion-item>
 
-    <ion-item lines="full">
+    <ion-item lines="full" class="reg-input">
       <ion-label position="floating">Password</ion-label>
       <ion-input type="password" #password required></ion-input>
     </ion-item>
@@ -25,4 +25,10 @@
       </ion-col>
     </ion-row>
   </form>
+  <ion-header class="ion-text-center words-at-bottom text-color-white ion-padding">
+    Meet like minded couples that are bound to be your new best friends & fill your fantasies
+  </ion-header>
+  <div style="padding: 20px; color: white;">
+    <img src="../../assets/images/logos/liberated-logo-512-white-letters.png">
+  </div>
 </ion-content>

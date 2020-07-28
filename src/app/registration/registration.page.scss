@@ -1,0 +1,14 @@
+ion-content {
+  background-image: url("../../assets/images/em-stace-lomgways.jpg");
+  background-size: cover;
+  background-position: center;
+  --background: transparent;
+}
+.reg-input {
+  --background: transparent ! important;
+  color: white;
+}
+.words-at-bottom{
+  margin-top: 25px;
+  color: white !important;
+}
