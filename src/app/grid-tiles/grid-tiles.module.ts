@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { GridTilesPage } from './grid-tiles.page';
 import {HeaderModule} from '../header/header.module';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 const routes: Routes = [
   {
@@ -21,6 +22,7 @@ const routes: Routes = [
         FormsModule,
         IonicModule,
         HeaderModule,
+        FontAwesomeModule,
         RouterModule.forChild(routes),
     ],
   declarations: [GridTilesPage]

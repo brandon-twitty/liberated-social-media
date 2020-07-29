@@ -20,6 +20,7 @@ import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {environment} from '../environment';
 import {AuthenticationService} from './services/authentication.service';
+import {MenuComponent} from './header/menu/menu.component';
 
 @NgModule({
   declarations: [AppComponent],
