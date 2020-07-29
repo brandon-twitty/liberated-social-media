@@ -23,12 +23,16 @@
       <ion-col>
         <ion-button type="submit" (click)="signUp(email, password)" expand="block">Register</ion-button>
       </ion-col>
+        <ion-col>
+            <ion-button color="danger" (click)="logIn(email, password)" expand="block">Login</ion-button>
+        </ion-col>
     </ion-row>
   </form>
   <ion-header class="ion-text-center words-at-bottom text-color-white ion-padding">
     Meet like minded couples that are bound to be your new best friends & fill your fantasies
   </ion-header>
-  <div style="padding: 20px; color: white;">
+
+  <div class="ion-text-center" style="padding: 20px; color: white;">
     <img src="../../assets/images/logos/liberated-logo-512-white-letters.png">
   </div>
 </ion-content>

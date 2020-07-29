@@ -29,34 +29,19 @@ export class AppComponent {
   sideMenu(){
     this.navigate = [
       {
-        title: 'Detailed Profile',
-        url: '/detailed-profile',
-        icon: 'person-remove-outline'
-      },
-      {
-        title: 'Dashboard',
-        url: '/dashboard',
-        icon: 'home'
-      },
-      {
-        title: 'Create Profile',
-        url: '/create-profile',
-        icon: 'home'
-      },
-      {
         title: 'Order Cards',
         url: '/create-cards',
-        icon: 'barcode-outline'
+       // icon: 'barcode-outline'
       },
       {
         title: 'My Connections',
         url: '/my-connections',
-        icon: 'contacts'
+      //  icon: 'contacts'
       },
       {
-        title: 'Login',
-        url: '/register',
-        icon: 'home'
+        title: 'Profile',
+        url: '/profile',
+      //  icon: 'home'
       },
     ];
   }
