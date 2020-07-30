@@ -4,6 +4,7 @@ import {MenuController, Platform} from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import {NavigationEnd, Router, RouterEvent} from '@angular/router';
+import { Plugins } from '@capacitor/core';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +13,6 @@ import {NavigationEnd, Router, RouterEvent} from '@angular/router';
 })
 export class AppComponent implements OnInit {
   navigate: any;
-  pages =[
-
-  ]
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,

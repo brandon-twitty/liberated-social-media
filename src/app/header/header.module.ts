@@ -5,6 +5,9 @@ import {ToolBarComponent} from './tool-bar/tool-bar.component';
 import {IonicModule} from '@ionic/angular';
 import {MenuComponent} from './menu/menu.component';
 import {FooterComponent} from './footer/footer.component';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
+import {AngularFirestoreModule} from '@angular/fire/firestore';
 
 
 
@@ -15,7 +18,11 @@ import {FooterComponent} from './footer/footer.component';
   ],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
+    AngularFirestoreModule
   ]
 })
 export class HeaderModule { }
+
