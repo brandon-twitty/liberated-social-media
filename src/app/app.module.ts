@@ -20,9 +20,11 @@ import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {environment} from '../environment';
 import {AuthenticationService} from './services/authentication.service';
+import {HeaderModule} from './header/header.module';
+import {FileSizeFormatPipe} from './file-size-format.pipe';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, FileSizeFormatPipe],
   entryComponents: [],
   imports: [BrowserModule,
     IonicModule.forRoot(), AppRoutingModule,
@@ -31,7 +33,7 @@ import {AuthenticationService} from './services/authentication.service';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    AngularFirestoreModule
+    AngularFirestoreModule, HeaderModule
   ],
   providers: [
     StatusBar,

@@ -10,7 +10,7 @@ export class DashboardPage implements OnInit {
 
   constructor(public authService: AuthenticationService) { }
 
-  ngOnInit() {
-  }
+ngOnInit() {
+}
 
 }
