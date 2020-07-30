@@ -24,6 +24,6 @@ import {TakePicComponent} from './take-pic/take-pic.component';
     AngularFirestoreModule, HeaderModule,
     CreateFriendPageRoutingModule
   ],
-  declarations: [CreateFriendPage, FileSizeFormatPipe, TakePicComponent]
+  declarations: [CreateFriendPage,  TakePicComponent]
 })
 export class CreateFriendPageModule {}
