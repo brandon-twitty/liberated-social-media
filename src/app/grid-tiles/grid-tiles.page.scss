@@ -15,3 +15,15 @@
   }
 }
 
+#outer
+{
+  width:100%;
+  text-align: center;
+  padding:25px;
+}
+.inner
+{
+  display: inline-block;
+  padding-inline: 5px;
+}
+
