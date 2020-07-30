@@ -27,10 +27,6 @@ const routes: Routes = [
         loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
       },
       {
-        path: 'reg-v-two',
-        loadChildren: () => import('./reg-v-two/reg-v-two.module').then( m => m.RegVTwoPageModule)
-      },
-      {
         path: 'grid-tiles',
         loadChildren: () => import('./grid-tiles/grid-tiles.module').then( m => m.GridTilesPageModule)
       },
@@ -45,7 +41,15 @@ const routes: Routes = [
   {
     path: 'messages',
     loadChildren: () => import('./messages/messages.module').then( m => m.MessagesPageModule)
+  },  {
+    path: 'event-list',
+    loadChildren: () => import('./event-list/event-list.module').then( m => m.EventListPageModule)
+  },
+  {
+    path: 'agenda',
+    loadChildren: () => import('./agenda/agenda.module').then( m => m.AgendaPageModule)
   }
+
 
 
 ]
