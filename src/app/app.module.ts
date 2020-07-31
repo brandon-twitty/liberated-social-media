@@ -22,9 +22,10 @@ import {environment} from '../environment';
 import {AuthenticationService} from './services/authentication.service';
 import {HeaderModule} from './header/header.module';
 import {FileSizeFormatPipe} from './file-size-format.pipe';
+import {UploadImageComponent} from './shared/upload-image/upload-image.component';
 
 @NgModule({
-  declarations: [AppComponent, FileSizeFormatPipe],
+  declarations: [AppComponent, FileSizeFormatPipe, UploadImageComponent],
   entryComponents: [],
   imports: [BrowserModule,
     IonicModule.forRoot(), AppRoutingModule,
@@ -43,10 +44,15 @@ import {FileSizeFormatPipe} from './file-size-format.pipe';
       provide: SwRegistrationOptions,
       useFactory: () => ({enabled: environment.production, registrationStrategy: 'registerImmediately'}),
     },
-    { provide: RouteReuseStrategy,
-      useClass: IonicRouteStrategy}
+    {
+      provide: RouteReuseStrategy,
+      useClass: IonicRouteStrategy
+    }
   ],
   bootstrap: [AppComponent],
+  exports: [
+    UploadImageComponent
+  ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {

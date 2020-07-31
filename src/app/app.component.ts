@@ -39,8 +39,8 @@ export class AppComponent implements OnInit {
   sideMenu(){
     this.navigate = [
       {
-        title: 'Order Cards',
-        url: '/create-cards',
+        title: 'Search Friends',
+        url: '/search',
        // icon: 'barcode-outline'
       },
       {
@@ -49,10 +49,15 @@ export class AppComponent implements OnInit {
       //  icon: 'contacts'
       },
       {
-        title: 'Profile',
-        url: '/profile',
+        title: 'Edit Profile',
+        url: '/profile/create',
       //  icon: 'home'
       },
+      {
+        title: 'Geo Locate Users',
+        url: '/geo-map',
+        //  icon: 'home'
+      }
     ];
   }
 }

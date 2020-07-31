@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { EventListPageRoutingModule } from './event-list-routing.module';
+import { SearchPageRoutingModule } from './search-routing.module';
 
-import { EventListPage } from './event-list.page';
+import { SearchPage } from './search.page';
 import {HeaderModule} from '../header/header.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import {HeaderModule} from '../header/header.module';
         CommonModule,
         FormsModule,
         IonicModule,
-        EventListPageRoutingModule,
+        SearchPageRoutingModule,
         HeaderModule
     ],
-  declarations: [EventListPage]
+  declarations: [SearchPage]
 })
-export class EventListPageModule {}
+export class SearchPageModule {}

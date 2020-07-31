@@ -14,4 +14,9 @@
     }
   }
 }
+.is-grid-bordered > ion-row {
+  > ion-col {
+    border: 1px solid rgb(235, 154, 187);
+  }
+}
 

@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { EventListPageRoutingModule } from './event-list-routing.module';
+import { GeoMapPageRoutingModule } from './geo-map-routing.module';
 
-import { EventListPage } from './event-list.page';
+import { GeoMapPage } from './geo-map.page';
 import {HeaderModule} from '../header/header.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import {HeaderModule} from '../header/header.module';
         CommonModule,
         FormsModule,
         IonicModule,
-        EventListPageRoutingModule,
+        GeoMapPageRoutingModule,
         HeaderModule
     ],
-  declarations: [EventListPage]
+  declarations: [GeoMapPage]
 })
-export class EventListPageModule {}
+export class GeoMapPageModule {}

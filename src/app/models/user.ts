@@ -1,15 +1,16 @@
 export class User {
     uid: string;
     email: string;
-    handle: string;
+    displayName: string;
     photoURL: string;
     emailVerified: boolean;
-    fullName: string;
-    age: number;
-    bio: string;
-    Q1: string;
-    Q2: string;
-    Q3: string;
-    Q4: string;
+
+    age: boolean;
+    bio: boolean;
+    cfss: boolean;
+    cfsbf: boolean;
+    cfsbm: boolean;
+    gbc: boolean;
+    cgogo: boolean;
     dateCreated: string;
 }

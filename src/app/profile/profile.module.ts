@@ -9,6 +9,19 @@ import { ProfilePageRoutingModule } from './profile-routing.module';
 import { ProfilePage } from './profile.page';
 import {CreateComponent} from './create/create.component';
 import {HeaderModule} from '../header/header.module';
+import {HttpClientModule} from '@angular/common/http';
+import {AppRoutingModule} from '../app-routing.module';
+import {AngularFireStorageModule,
+    AngularFireStorageReference,
+    AngularFireUploadTask,
+    } from '@angular/fire/storage';
+import {BrowserModule} from '@angular/platform-browser';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import {AngularFireModule} from '@angular/fire';
+import {environment} from '../../environment';
+import {AppModule} from '../app.module';
+
+
 
 @NgModule({
     imports: [
@@ -17,8 +30,15 @@ import {HeaderModule} from '../header/header.module';
         ReactiveFormsModule,
         IonicModule,
         ProfilePageRoutingModule,
-        HeaderModule
+        HeaderModule,
+        HttpClientModule,
+        BrowserModule,
+        AppRoutingModule,
+        AngularFirestoreModule,
+        AngularFireStorageModule,
+        AppModule
     ],
-  declarations: [ProfilePage, CreateComponent]
+  declarations: [ProfilePage, CreateComponent],
+
 })
 export class ProfilePageModule {}

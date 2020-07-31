@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { FriendsListPageRoutingModule } from './friends-list-routing.module';
 
 import { FriendsListPage } from './friends-list.page';
+import {HeaderModule} from '../header/header.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    FriendsListPageRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        FriendsListPageRoutingModule,
+        HeaderModule
+    ],
   declarations: [FriendsListPage]
 })
 export class FriendsListPageModule {}

@@ -1,23 +1,53 @@
 <app-menu></app-menu>
+<app-upload-image></app-upload-image>
 <ion-content>
   <ion-list>
   <ion-item lines="full" class="reg-input">
-    <ion-label position="floating">User Name</ion-label>
+    <ion-label position="floating">Name</ion-label>
     <ion-input type="text" required></ion-input>
   </ion-item>
   <ion-item lines="full" class="reg-input">
-    <ion-label position="floating">Email</ion-label>
-    <ion-input type="text" #email required></ion-input>
+    <ion-label position="floating">Bio</ion-label>
+    <ion-textarea type="input" ></ion-textarea>
   </ion-item>
+    <ion-item lines="full" class="reg-input">
+      <ion-label position="floating">How did We Meet?!</ion-label>
+      <ion-textarea type="input" ></ion-textarea>
+      <i class="fa fa-meetup" aria-hidden="true"></i>
+    </ion-item>
   <ion-item lines="full" class="reg-input" >
-    <ion-label position="floating">Password</ion-label>
-    <ion-input type="text" ></ion-input>
-    <ion-icon name="password" #password size="small" slot="end"></ion-icon>
+    <ion-label position="floating">Age</ion-label>
+    <ion-input type="number" ></ion-input>
+    <ion-icon name="password" size="small" slot="end"></ion-icon>
   </ion-item>
-  <ion-item lines="full" class="reg-input">
-    <ion-label position="floating">How did We Meet?!</ion-label>
-    <ion-input type="text" ></ion-input>
-    <ion-icon name="person" size="small" slot="end"></ion-icon>
-  </ion-item>
+    <ion-item>
+      <ion-label>Gender</ion-label>
+      <ion-select placeholder="Select One">
+        <ion-select-option value="f">Female</ion-select-option>
+        <ion-select-option value="m">Male</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="full" class="reg-input">
+      <ion-label position="floating">Body Type</ion-label>
+      <ion-input type="text" ></ion-input>
+      <i class="fa fa-meetup" aria-hidden="true"></i>
+    </ion-item>
+    <ion-item lines="full" class="reg-input">
+      <ion-label position="floating">How did We Meet?!</ion-label>
+      <ion-input type="text" ></ion-input>
+      <i class="fa fa-meetup" aria-hidden="true"></i>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Sexual Preference</ion-label>
+      <ion-select multiple="true" cancelText="Nah" okText="Okay!">
+        <ion-select-option value="cfss">Couple Full Swap Straight</ion-select-option>
+        <ion-select-option value="cfsbf">Couple Full Swap Bi Female</ion-select-option>
+        <ion-select-option value="cfsbm">Couple Full Swap Bi Male</ion-select-option>
+        <ion-select-option value="gbc">Gang Bang Couple</ion-select-option>
+        <ion-select-option value="cgogo">Couple Girl on Girl Only</ion-select-option>
+      </ion-select>
+    </ion-item>
+
   </ion-list>
 </ion-content>
