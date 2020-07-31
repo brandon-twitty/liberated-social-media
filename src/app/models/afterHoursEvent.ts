@@ -9,7 +9,7 @@ export class AfterHoursEvent {
     cost: number;
     eventDescription: string;
     limitInvites: number;
-    eventImage; string;
+    eventImage: string;
     socialMediaLink: string;
     users: User[];
 }

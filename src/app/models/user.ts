@@ -4,7 +4,6 @@ export class User {
     displayName: string;
     photoURL: string;
     emailVerified: boolean;
-
     age: boolean;
     bio: boolean;
     cfss: boolean;

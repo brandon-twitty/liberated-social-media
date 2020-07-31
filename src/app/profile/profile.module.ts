@@ -4,22 +4,18 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ProfilePageRoutingModule } from './profile-routing.module';
+
 
 import { ProfilePage } from './profile.page';
-import {CreateComponent} from './create/create.component';
+import {CreateProfileComponent} from './create/create-profile.component';
 import {HeaderModule} from '../header/header.module';
-import {HttpClientModule} from '@angular/common/http';
-import {AppRoutingModule} from '../app-routing.module';
-import {AngularFireStorageModule,
-    AngularFireStorageReference,
-    AngularFireUploadTask,
-    } from '@angular/fire/storage';
-import {BrowserModule} from '@angular/platform-browser';
+
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import {AngularFireModule} from '@angular/fire';
-import {environment} from '../../environment';
-import {AppModule} from '../app.module';
+
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
+import {RouterModule} from '@angular/router';
 
 
 
@@ -27,18 +23,14 @@ import {AppModule} from '../app.module';
     imports: [
         CommonModule,
         FormsModule,
-        ReactiveFormsModule,
         IonicModule,
-        ProfilePageRoutingModule,
         HeaderModule,
-        HttpClientModule,
-        BrowserModule,
-        AppRoutingModule,
-        AngularFirestoreModule,
-        AngularFireStorageModule,
-        AppModule
+        FontAwesomeModule,
+        AngularFireAuthModule,
+        AngularFireDatabaseModule,
+        AngularFirestoreModule
     ],
-  declarations: [ProfilePage, CreateComponent],
+  declarations: [ProfilePage, CreateProfileComponent]
 
 })
 export class ProfilePageModule {}

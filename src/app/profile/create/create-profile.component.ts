@@ -6,19 +6,20 @@ import {User} from '../../models/user';
 import {Observable} from 'rxjs';
 import {AngularFireStorage} from '@angular/fire/storage';
 import {finalize} from 'rxjs/operators';
+import {Router} from '@angular/router';
 
 
 
 
 @Component({
   selector: 'app-create',
-  templateUrl: './create.component.html',
-  styleUrls: ['./create.component.scss'],
+  templateUrl: './create-profile.component.html',
+  styleUrls: ['./create-profile.component.scss'],
 })
-export class CreateComponent implements OnInit {
+export class CreateProfileComponent implements OnInit {
 
 
-  constructor(public fb: FormBuilder, private storage: AngularFireStorage) { }
+  constructor(public fb: FormBuilder, private storage: AngularFireStorage, private router: Router) { }
 
 
   selectedFile: File = null;
@@ -33,13 +34,6 @@ export class CreateComponent implements OnInit {
 
 
   ngOnInit() {
-    firebase.auth().onAuthStateChanged(user => {
-      if (user) {
-        this.createProfileForm();
-      } else {
-        // No user is signed in.
-      }
-    });
   }
 createProfileForm(){
     this.userForm = this.fb.group({

@@ -39,24 +39,28 @@ export class AppComponent implements OnInit {
   sideMenu(){
     this.navigate = [
       {
-        title: 'Search Friends',
+        title: 'Search',
         url: '/search',
        // icon: 'barcode-outline'
       },
       {
-        title: 'My Connections',
-        url: '/my-connections',
+        title: 'Friends',
+        url: '/friends-list',
       //  icon: 'contacts'
       },
       {
-        title: 'Edit Profile',
-        url: '/profile/create',
+        title: 'Profile',
+        url: '/profile',
       //  icon: 'home'
       },
       {
         title: 'Geo Locate Users',
         url: '/geo-map',
         //  icon: 'home'
+      },
+      {
+        title: 'Home',
+        url: '/grid-tiles'
       }
     ];
   }

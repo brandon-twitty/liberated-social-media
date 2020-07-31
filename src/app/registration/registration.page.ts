@@ -37,8 +37,5 @@ export class RegistrationPage implements OnInit {
             window.alert(error.message);
         });
     }
-  gotoLogIn(){
-      return this.router.navigate(['dashboard']);
-  }
 
 }

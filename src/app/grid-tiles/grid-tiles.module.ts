@@ -28,8 +28,7 @@ const routes: Routes = [
         FontAwesomeModule,
         AngularFireAuthModule,
         AngularFireDatabaseModule,
-        AngularFirestoreModule,
-        RouterModule.forChild(routes),
+        AngularFirestoreModule
     ],
   declarations: [GridTilesPage],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
