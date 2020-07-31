@@ -20,3 +20,55 @@
   }
 }
 
+.ion-button {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  text-align: center;
+  margin-top: 5px;
+}
+
+
+.ion-btn1 {
+  background-color: #f50505;
+  border-radius: 6px;
+  padding: 5px 12px;
+  margin-left: 3px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid #ee5a8f;
+
+
+}
+.ion-btn1:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+}
+
+.ion-btn2 {
+  background-color: #07aa0f;
+  border-radius: 6px;
+  padding: 5px 12px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  border: 2px solid #65f16a;
+}
+
+.ion-btn2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+}
+
+ .ion-btn3 {
+  background-color: #5900ff;
+   border-radius: 6px;
+   padding: 5px 12px;
+   margin-right: 5px;
+   color: #ffffff;
+   font-size: 14px;
+   font-weight: bold;
+   border: 2px solid #7011e2;
+ }
+.ion-btn2:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+}
