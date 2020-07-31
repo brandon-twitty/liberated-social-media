@@ -41,7 +41,8 @@ const routes: Routes = [
   {
     path: 'messages',
     loadChildren: () => import('./messages/messages.module').then( m => m.MessagesPageModule)
-  },  {
+  },
+  {
     path: 'event-list',
     loadChildren: () => import('./event-list/event-list.module').then( m => m.EventListPageModule)
   },
@@ -60,11 +61,12 @@ const routes: Routes = [
   {
     path: 'events',
     loadChildren: () => import('./events/events.module').then( m => m.EventsPageModule)
+  },
+  {
+    path: 'maps',
+    loadChildren: () => import('./maps/maps.module').then( m => m.MapsPageModule)
   }
-
-
-
-]
+];
 
 @NgModule({
   imports: [

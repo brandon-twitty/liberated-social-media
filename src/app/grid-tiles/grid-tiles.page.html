@@ -10,7 +10,7 @@
               Messages
             </h6>
             <p class="is-tile-text">
-              See what your <br>new friends want?!
+              See what your<br>new friends want?!
             </p>
           </ion-label>
         </ion-item>
@@ -23,7 +23,7 @@
                 Friends
               </h6>
               <p class="is-tile-text">
-                Who is online <br>or near you?
+                Who is online<br>or near you?
               </p>
             </ion-label>
           </ion-item>
@@ -39,26 +39,39 @@
             </h6>
             <p class="is-tile-text">
               Snap a live pic<br>
-              Create a profile for you
+              Make a live Friend
             </p>
           </ion-label>
         </ion-item>
       </ion-col>
       <ion-col size="6" class="ion-text-center is-tile ion-no-padding">
-        <ion-item class="ion-text-center" routerLink="/ledger" lines="none" detail="false">
+        <ion-item class="ion-text-center" routerLink="/events" lines="none" detail="false">
           <ion-label class="ion-no-margin">
             <ion-icon name="card"></ion-icon>
             <h6 class="is-tile-text">
-              AfterHoursEvent Wallet
+              After Hours<br>Event
             </h6>
             <p class="is-tile-text">
-              Tip Your Contestant
+              Find.Join.Live
             </p>
           </ion-label>
         </ion-item>
       </ion-col>
     </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="success" routerLink="/create-events">Create<br>After Party</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="success" routerLink="/deposit-party">Deposit to<br>party wallet</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="success" routerLink="/map">Sees who<br>is near by</ion-button>
+      </ion-col>
+    </ion-row>
   </ion-grid>
 </ion-content>
-
+<div class="ion-text-center">
+  <h2>Recently Joined</h2>
+</div>
 <app-footer></app-footer>

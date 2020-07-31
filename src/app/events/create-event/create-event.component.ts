@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {AfterHoursEvent} from '../../models/afterHoursEvent';
 import {HttpClient} from '@angular/common/http';
 import {FormBuilder, FormGroup} from '@angular/forms';
-
+import { v4 as uuidv4 } from 'uuid';
+import {Camera, CameraResultType} from '@capacitor/core';
 @Component({
   selector: 'app-create-event',
   templateUrl: './create-event.component.html',
@@ -11,12 +12,12 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 export class CreateEventComponent implements OnInit {
   afterEvent: AfterHoursEvent = new AfterHoursEvent();
  eventForm: FormGroup;
-  euid: any;
   constructor(private http: HttpClient, private fb: FormBuilder) {
   }
 
   ngOnInit() {
     this.CreateEventForm();
+    this.prepareEventObject();
   }
 
   CreateEventForm() {
@@ -30,8 +31,21 @@ export class CreateEventComponent implements OnInit {
     });
   }
   prepareEventObject(){
-    this.afterEvent.euid = new uuid();
+    this.afterEvent.euid = uuidv4();
+    console.log(this.afterEvent.euid);
   }
+    async takePicture() {
+        try {
+            const profilePicture = await Camera.getPhoto({
+                quality: 90,
+                allowEditing: false,
+                resultType: CameraResultType.Base64,
+            });
+            this.afterEvent.eventImage = profilePicture.base64String;
+        } catch (error) {
+            console.error(error);
+        }
+    }
 }
 
 

@@ -7,6 +7,9 @@ export class AfterHoursEvent {
     eventStartTime: string;
     eventOwner: string;
     cost: number;
+    eventDescription: string;
     limitInvites: number;
-    uses: User[];
+    eventImage; string;
+    socialMediaLink: string;
+    users: User[];
 }

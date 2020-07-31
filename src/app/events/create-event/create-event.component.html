@@ -1,3 +1,61 @@
-<p>
-  create-event works!
-</p>
+<app-tool-bar></app-tool-bar>
+<ion-content>
+  <form [formGroup]="eventForm" (ngSubmit)="creatEvent()">
+    <ion-list class="ion-padding">
+      <ion-list-header>
+        <ion-label>Create After Hours Event</ion-label>
+      </ion-list-header>
+      <ion-card class="ion-text-center" >
+        <ion-card-header>
+          <ion-card-title>Take a Photo to Entice People</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <button (click)="takePicture()" expand="block" fill="outline"></button>
+
+        </ion-card-content>
+      </ion-card>
+      <ion-item lines="full" class="reg-input">
+        <ion-label position="floating">Event Name</ion-label>
+        <ion-input type="text" formControlName="eventName" required></ion-input>
+      </ion-item>
+      <ion-item lines="full" class="reg-input">
+        <ion-label position="floating">Who is Running this Joint!</ion-label>
+        <ion-input type="text" formControlName="eventOwner" required></ion-input>
+      </ion-item>
+      <ion-item lines="full" class="reg-input">
+        <ion-label position="floating">Place of Festivities</ion-label>
+        <ion-input type="text" formControlName="eventLocation" required></ion-input>
+      </ion-item>
+      <ion-item lines="full" class="reg-input" >
+        <ion-label position="floating">Time of Event</ion-label>
+        <ion-input type="text" ></ion-input>
+        <ion-icon name="password" formControlName="eventStartTime" slot="end"></ion-icon>
+      </ion-item>
+      <ion-item lines="full" class="reg-input" >
+        <ion-label position="floating">Does it Cost</ion-label>
+        <ion-input type="text" formControlName="cost"></ion-input>
+        <ion-icon name="password" formControlName="cost"  slot="end"></ion-icon>
+      </ion-item>
+      <ion-item lines="full" class="reg-input">
+        <ion-label position="floating">Is there a limit on Invites</ion-label>
+        <ion-input type="text" ></ion-input>
+        <ion-icon name="person" formControlName="limitInvites"  slot="end"></ion-icon>
+      </ion-item>
+      <ion-item lines="full" class="reg-input">
+        <ion-label position="floating">Describe it!! hope it's sexy</ion-label>
+        <ion-input type="text" ></ion-input>
+        <ion-icon name="person" formControl="eventDescription" slot="end"></ion-icon>
+      </ion-item>
+      <ion-item lines="full" class="reg-input">
+        <ion-label position="floating">Add Social Media Link if ya Like</ion-label>
+        <ion-input type="text" ></ion-input>
+        <ion-icon name="person" formControl="socialMediaLink" slot="end"></ion-icon>
+      </ion-item>
+    </ion-list>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" (click)="nextScreen()"  expand="block">Create Event</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
