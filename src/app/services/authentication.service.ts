@@ -4,6 +4,7 @@ import {AngularFireAuth} from '@angular/fire/auth';
 import {AngularFirestore, AngularFirestoreDocument} from '@angular/fire/firestore';
 import {User} from '../models/user';
 import {auth} from 'firebase';
+import {Deserializable} from '../models/deserialization';
 
 @Injectable({
   providedIn: 'root'
@@ -84,7 +85,7 @@ export class AuthenticationService {
       email: user.email,
       displayName: user.displayName,
       photoURL: user.photoURL,
-      emailVerified: user.emailVerified
+      emailVerified: user.emailVerified,
     };
     return userRef.set(userData, {
       merge: true
