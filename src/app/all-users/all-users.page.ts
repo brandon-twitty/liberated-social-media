@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import * as firebase from 'firebase';
+import {AuthenticationService} from '../services/authentication.service';
 
 @Component({
   selector: 'app-all-users',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllUsersPage implements OnInit {
 
-  constructor() { }
+  constructor(public authService: AuthenticationService) { }
 
   ngOnInit() {
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+        console.log('this fucking user', user);
+      } else {
+        // No user is signed in.
+      }
+    });
   }
 
 }
