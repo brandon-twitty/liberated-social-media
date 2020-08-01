@@ -86,6 +86,14 @@ export class AuthenticationService {
       displayName: user.displayName,
       photoURL: user.photoURL,
       emailVerified: user.emailVerified,
+      fullName: user.fullName,
+    age: user.fullName,
+    bio: user.bio,
+    Q1: user.Q1,
+    Q2: user.Q2,
+    Q3: user.Q3,
+    Q4: user.Q4,
+    dateCreated: user.dateCreated
     };
     return userRef.set(userData, {
       merge: true

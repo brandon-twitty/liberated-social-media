@@ -41,18 +41,28 @@ const routes: Routes = [
   {
     path: 'messages',
     loadChildren: () => import('./messages/messages.module').then( m => m.MessagesPageModule)
-  },  {
+  },
+  {
     path: 'event-list',
     loadChildren: () => import('./event-list/event-list.module').then( m => m.EventListPageModule)
   },
+    {
+        path: 'events',
+        loadChildren: () => import('./events/events.module').then( m => m.EventsPageModule)
+    },
   {
     path: 'agenda',
     loadChildren: () => import('./agenda/agenda.module').then( m => m.AgendaPageModule)
+  },
+  {
+    path: 'all-users',
+    loadChildren: () => import('./all-users/all-users.module').then( m => m.AllUsersPageModule)
   }
 
 
 
-]
+
+];
 
 @NgModule({
   imports: [
