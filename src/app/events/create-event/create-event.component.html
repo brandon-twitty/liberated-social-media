@@ -1,0 +1,53 @@
+<app-tool-bar></app-tool-bar>
+<ion-content>
+  <form [formGroup]="eventForm" (ngSubmit)="creatEvent()">
+    <ion-list class="ion-padding">
+      <ion-list-header class="ion-text-center">
+        <ion-grid>
+          <ion-row>
+            <h6 class="ion-text-center">Take a Photo to Entice People</h6>
+            <h3>Create After Hours Event</h3>
+          </ion-row>
+      </ion-grid>
+      </ion-list-header>
+          <ion-fab vertical="top" horizontal="end" slot="fixed">
+            <ion-fab-button (click)="takeEventPic()">
+              <ion-icon name="camera"></ion-icon>
+            </ion-fab-button>
+          </ion-fab>
+      <ion-item lines="full" class="reg-input">
+        <ion-label position="stacked">Event Name</ion-label>
+        <ion-input type="text" id="eventName" formControlName="eventName" required></ion-input>
+      </ion-item>
+      <ion-item lines="full" class="reg-input">
+        <ion-label position="stacked">Who is Running this Joint!</ion-label>
+        <ion-input type="text" formControlName="eventOwner" required></ion-input>
+      </ion-item>
+      <ion-item lines="full" class="reg-input">
+        <ion-label position="stacked">Place of Festivities</ion-label>
+        <ion-input type="text" formControlName="eventLocation" required></ion-input>
+      </ion-item>
+      <ion-item lines="full" class="reg-input" >
+        <ion-label position="stacked">Time of Event</ion-label>
+        <ion-input type="text"  formControlName="eventStartTime" ></ion-input>
+      </ion-item>
+      <ion-item lines="full" class="reg-input" >
+        <ion-label position="stacked">Does it Cost</ion-label>
+        <ion-input type="text" formControlName="cost"></ion-input>
+      </ion-item>
+      <ion-item lines="full" class="reg-input">
+        <ion-label position="stacked">Is there a limit on Invites</ion-label>
+        <ion-input type="text" formControlName="limitInvites"></ion-input>
+      </ion-item>
+      <ion-item lines="full" class="reg-input">
+        <ion-label position="stacked">Describe it!! hope it's sexy</ion-label>
+        <ion-textarea type="input" formControlName="eventDescription"></ion-textarea>
+      </ion-item>
+    </ion-list>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" (click)="nextScreen()"  expand="block">Create Event</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
