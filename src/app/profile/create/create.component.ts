@@ -21,6 +21,7 @@ export class CreateComponent implements OnInit {
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
         this.createProfileForm();
+        console.log('this user is logged in', user);
       } else {
         // No user is signed in.
       }
@@ -29,13 +30,8 @@ export class CreateComponent implements OnInit {
 createProfileForm(){
     this.userForm = this.fb.group({
       handle: [''],
-      fullName: [''],
-      age: [''],
-      bio: [''],
-      Q1: [''],
-      Q2: [''],
-      Q3: [''],
-      Q4: ['']
+      photoUrl: [''],
+
     });
 }
 prepareObject(){

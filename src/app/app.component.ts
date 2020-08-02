@@ -44,8 +44,8 @@ export class AppComponent implements OnInit {
        // icon: 'barcode-outline'
       },
       {
-        title: 'My Connections',
-        url: '/my-connections',
+        title: 'All Users',
+        url: '/all-users',
       //  icon: 'contacts'
       },
       {
