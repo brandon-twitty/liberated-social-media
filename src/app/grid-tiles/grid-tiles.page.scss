@@ -26,4 +26,9 @@
   display: inline-block;
   padding-inline: 5px;
 }
-
+.tile-background {
+  background-image: url("../../assets/images/panda-head.jpg");
+  background-size: cover;
+  background-position: center;
+  --background: transparent;
+}
