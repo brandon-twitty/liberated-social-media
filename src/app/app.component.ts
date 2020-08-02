@@ -39,19 +39,14 @@ export class AppComponent implements OnInit {
   sideMenu(){
     this.navigate = [
       {
-        title: 'Order Cards',
-        url: '/create-cards',
-       // icon: 'barcode-outline'
-      },
-      {
-        title: 'My Connections',
-        url: '/my-connections',
-      //  icon: 'contacts'
+        title: 'Home',
+        url: '/grid-tiles',
+        icon: 'home'
       },
       {
         title: 'Profile',
         url: '/profile',
-      //  icon: 'home'
+        icon: 'profile'
       },
     ];
   }
