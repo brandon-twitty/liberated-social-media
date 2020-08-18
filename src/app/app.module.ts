@@ -22,6 +22,11 @@ import {environment} from '../environment';
 import {AuthenticationService} from './services/authentication.service';
 import {HeaderModule} from './header/header.module';
 import {FileSizeFormatPipe} from './file-size-format.pipe';
+import { UiModule } from './ui/ui.module';
+import {AngularFireStorageModule,
+  AngularFireStorageReference,
+  AngularFireUploadTask,
+  } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [AppComponent, FileSizeFormatPipe],
@@ -33,7 +38,8 @@ import {FileSizeFormatPipe} from './file-size-format.pipe';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    AngularFirestoreModule, HeaderModule
+      AngularFireStorageModule,
+    AngularFirestoreModule, HeaderModule, UiModule
   ],
   providers: [
     StatusBar,

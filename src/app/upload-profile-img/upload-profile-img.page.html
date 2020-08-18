@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>upload-profile-img</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="form-group col-12">
+    <input type="file"
+           id="file"
+           #userPhoto
+           (change)="onFileSelected($event)"
+           name="image"
+           autocomplete="off"
+    />
+  </div>
+</ion-content>

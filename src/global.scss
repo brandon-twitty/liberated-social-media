@@ -27,6 +27,7 @@ body{
 
 @import "./theme/essential/theme";
 @import "./theme/awesome/theme";
+@import '~bootstrap/scss/bootstrap';
 .light-pink-text{
   color: #eb9abb;
 }
@@ -36,4 +37,8 @@ body{
 }
 fa-icon{
   font-size:40px;
+}
+html,
+body {
+  height: 100%;
 }

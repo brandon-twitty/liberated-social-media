@@ -60,6 +60,10 @@ const routes: Routes = [
   },  {
     path: 'about-us',
     loadChildren: () => import('./about-us/about-us.module').then( m => m.AboutUsPageModule)
+  },
+  {
+    path: 'upload-profile-img',
+    loadChildren: () => import('./upload-profile-img/upload-profile-img.module').then( m => m.UploadProfileImgPageModule)
   }
 
 
