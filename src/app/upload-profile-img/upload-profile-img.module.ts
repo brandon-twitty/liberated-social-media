@@ -8,6 +8,7 @@ import { UploadProfileImgPageRoutingModule } from './upload-profile-img-routing.
 
 import { UploadProfileImgPage } from './upload-profile-img.page';
 import {AngularFireStorageModule} from '@angular/fire/storage';
+import {FileSizeFormatPipe} from './file-size-format.pipe';
 
 @NgModule({
   imports: [
@@ -16,8 +17,9 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
     IonicModule,
     AngularFireStorageModule,
       ReactiveFormsModule,
+      FormsModule,
     UploadProfileImgPageRoutingModule
   ],
-  declarations: [UploadProfileImgPage]
+  declarations: [UploadProfileImgPage, FileSizeFormatPipe]
 })
 export class UploadProfileImgPageModule {}

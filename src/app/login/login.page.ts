@@ -21,7 +21,7 @@ export class LoginPage implements OnInit {
             this.router.navigate(['dashboard']);
           } else {
             window.alert('Email is not verified');
-            return false;
+            this.router.navigate(['verify-email']);
           }
         }).catch((error) => {
       window.alert(error.message);
