@@ -39,6 +39,11 @@ export class AppComponent implements OnInit {
   sideMenu(){
     this.navigate = [
       {
+        title: 'About Us',
+        url: '/about-us',
+        icon: 'home'
+      },
+      {
         title: 'Home',
         url: '/grid-tiles',
         icon: 'home'

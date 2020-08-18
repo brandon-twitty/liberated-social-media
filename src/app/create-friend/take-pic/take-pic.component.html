@@ -1,1 +1,9 @@
-<button (click)="takePicture()" expand="block" fill="outline"></button>
+<ion-content>
+    <h2 style="color:white" class="ion-text-center">Picture your new friend</h2>
+    <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+        <ion-fab-button (click)="takePicture()">
+            <ion-icon name="camera"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+</ion-content>

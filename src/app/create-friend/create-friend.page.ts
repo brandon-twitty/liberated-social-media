@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AuthenticationService} from '../services/authentication.service';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {CameraResultType, Plugins} from '@capacitor/core';
 import {AngularFireStorage, AngularFireUploadTask} from '@angular/fire/storage';
 import {Observable} from 'rxjs';
@@ -39,12 +39,16 @@ export class CreateFriendPage implements OnInit {
 
     private imageCollection: AngularFirestoreCollection<ImageData>;
   constructor(public authService: AuthenticationService,
-              public router: Router, private storage: AngularFireStorage, private database: AngularFirestore) {
+              public router: Router, private storage: AngularFireStorage, private database: AngularFirestore, private activeRoute: ActivatedRoute) {
       this.isUploading = false;
       this.isUploaded = false;
       // Set collection where our documents/ images info will save
       this.imageCollection = database.collection<ImageData>('freakyImages');
       this.images = this.imageCollection.valueChanges();
+      const navigation = this.router.getCurrentNavigation();
+      const state = navigation.extras.state;
+      this.guestPicture = state.guestPicture;
+      console.log('picture from landing page', this.guestPicture);
   }
 
     uploadFile(event: FileList) {
@@ -55,7 +59,7 @@ export class CreateFriendPage implements OnInit {
 
         // Validation for Images Only
         if (file.type.split('/')[0] !== 'image') {
-            console.error('unsupported file type :( ')
+            console.error('unsupported file type :( ');
             return;
         }
 
