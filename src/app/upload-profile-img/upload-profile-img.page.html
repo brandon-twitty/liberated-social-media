@@ -1,17 +1,20 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>upload-profile-img</ion-title>
-  </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="form-group col-12">
-    <input type="file"
-           id="file"
-           #userPhoto
-           (change)="onFileSelected($event)"
-           name="image"
-           autocomplete="off"
-    />
+<ion-content >
+<div class="container input-backdrop">
+  <div class="row ion-text-center">
+    <div class="col-12 ">
+      <div class="container" *ngIf="downloadURL | async; let url">
+        <img [src]="url" alt="Image from AngularFireStorage">
+      </div>`
+      <br><br>
+      <ion-input type="file" (change)="showPreview($event)"></ion-input>
+      <ion-button (click)="save()">Save</ion-button>
+      <h2 style="color:white">File View</h2>
+    </div>
+
   </div>
+</div>
+
 </ion-content>

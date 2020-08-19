@@ -18,6 +18,7 @@ import {AngularFireStorageModule} from '@angular/fire/storage';
       ReactiveFormsModule,
     UploadProfileImgPageRoutingModule
   ],
-  declarations: [UploadProfileImgPage]
+  declarations: [UploadProfileImgPage],
+  exports: []
 })
 export class UploadProfileImgPageModule {}

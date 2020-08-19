@@ -1,0 +1,22 @@
+ion-content {
+  background-image: url("../../assets/images/panda-head.jpg");
+  background-size: cover;
+  --background: transparent;
+  min-height: 100%;
+  min-width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.input-backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.native-input.sc-ion-input-md {
+  text-align: center !important;
+}

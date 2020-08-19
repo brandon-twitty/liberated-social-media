@@ -1,41 +1,62 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Sign in User</ion-title>
-  </ion-toolbar>
+
 </ion-header>
 
 <ion-content>
-  <form>
-    <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" #email required></ion-input>
-    </ion-item>
+  <div class="container">
+    <div class="row" style="padding-top: 75px;">
+      <div class="col-md-6 input-backdrop">
+        <div class="ion-text-center logo">
+          <img width="80%" src="../../assets/images/logos/liberated-logo-512-white-letters.png">
+          <h4 class="ion-text-center words-at-bottom text-color-white ion-padding">
+            Meet like minded couples that are bound to be your new best friends & fill your fantasies
+          </h4>
+        </div>
+      </div>
+      <div class="col-md-6 input-backdrop">
+        <form>
+          <ion-item lines="full" class="reg-input">
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="text" #email required></ion-input>
+          </ion-item>
 
-    <ion-item lines="full">
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" #password required></ion-input>
-    </ion-item>
+          <ion-item lines="full" class="reg-input" style="padding-bottom: 20px">
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" #password required></ion-input>
+          </ion-item>
+          <ion-button type="submit" (click)="signUp()" expand="block">Register</ion-button>
+          <ion-button color="danger" (click)="logIn(email, password)" expand="block">Login</ion-button>
+          <form>
+            <ion-row>
+              <ion-col>
+                <ion-button
+                        type="submit"
+                        color="danger"
+                        (click)="authService.GoogleAuth()"
+                        expand="block">
+                  Login with Google
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </form>
+        </form>
 
-    <ion-row>
-      <ion-col>
-        <ion-button type="submit" (click)="logIn(email, password)" expand="block">Login</ion-button>
-      </ion-col>
-    </ion-row>
-  </form>
-  <form>
-    <ion-row>
-      <ion-col>
-        <ion-button
-                type="submit"
-                color="danger"
-                (click)="authService.GoogleAuth()"
-                expand="block">
-          Login with Google
-        </ion-button>
-      </ion-col>
-    </ion-row>
-  </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row ion-text-center">
+
+      <div class="col-md-12">
+        <video class="founders-video" controls>
+          <source src="https://firebasestorage.googleapis.com/v0/b/liberated-kind.appspot.com/o/the-liberated-kind.mp4?alt=media&token=ff591c19-1d62-47bd-b364-c04a9322167a" type="video/mp4">
+
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
 </ion-content>

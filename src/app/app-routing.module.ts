@@ -2,18 +2,20 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+
+    {
+        path: '',
+        loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    },
         {
-            path: '',
+            path: 'registration',
             loadChildren: () => import('./registration/registration.module').then( m => m.RegistrationPageModule)
         },
       {
         path: 'tabs',
         loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
       },
-      {
-        path: 'login',
-        loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-      },
+
       {
         path: 'profile',
         loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
@@ -57,13 +59,18 @@ const routes: Routes = [
   {
     path: 'all-users',
     loadChildren: () => import('./all-users/all-users.module').then( m => m.AllUsersPageModule)
-  },  {
+  },
+  {
     path: 'about-us',
     loadChildren: () => import('./about-us/about-us.module').then( m => m.AboutUsPageModule)
   },
   {
     path: 'upload-profile-img',
     loadChildren: () => import('./upload-profile-img/upload-profile-img.module').then( m => m.UploadProfileImgPageModule)
+  },
+  {
+    path: 'intro-prof',
+    loadChildren: () => import('./intro-prof/intro-prof.module').then( m => m.IntroProfPageModule)
   }
 
 

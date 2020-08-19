@@ -1,0 +1,9 @@
+steps:
+  - name: 'node:12.18.3'
+    entrypoint: 'npm'
+    args: ['install', '-D', '@angular/cli']
+  - name: 'node:12.18.3'
+    entrypoint: 'npx'
+    args: ['ionic', 'build', '--prod']
+  - name: 'gcr.io/liberated-kind/firebase'
+    args: ['deploy', '--project=liberated-kind', '--only', 'hosting:liberatedkind']
