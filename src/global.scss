@@ -8,6 +8,42 @@
  * For more information on global stylesheets, visit the documentation:
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
+
+/* Core CSS required for Ionic components to work properly */
+// http://ionicframework.com/docs/theming/
+@import "~@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+@import '~bootstrap/scss/bootstrap';
+@import 'theme/global/header';
+@import 'theme/global/offcanvas';
+@import 'theme/global/typography';
+@import 'theme/fields/fields';
+@import 'theme/components/components';
+@import "liberated-kind";
+.light-pink-text{
+  color: #eb9abb;
+}
+
+.dark-pink-text{
+  color: #a24689;
+}
+fa-icon{
+  font-size:40px;
+}
+html,
+body {
+  height: 100%;
+}
 body{
   height:100%;
   background-color: rgba(0,0,0,0.5);
@@ -29,9 +65,7 @@ ion-content {
   top: 0;
   left: 0;
 }
-form{
-  padding-top: 125px;
-}
+
 .section-one {
 
 
@@ -61,7 +95,7 @@ form{
   ion-content {
     /* The file size of this background image is 93% smaller
        to improve page load speed on mobile internet connections */
-    background-image: url(./assets/images/panda-head.jpg);
+    background-image: url(./assets/images/panda-head-sm.jpg);
   }
   form{
     padding: 50px 0 50px;
@@ -73,35 +107,4 @@ form{
     width: 100%;
     height: auto;
   }
-}
-
-/* Core CSS required for Ionic components to work properly */
-// http://ionicframework.com/docs/theming/
-@import "~@ionic/angular/css/core.css";
-@import "~@ionic/angular/css/normalize.css";
-@import "~@ionic/angular/css/structure.css";
-@import "~@ionic/angular/css/typography.css";
-
-@import "~@ionic/angular/css/padding.css";
-@import "~@ionic/angular/css/float-elements.css";
-@import "~@ionic/angular/css/text-alignment.css";
-@import "~@ionic/angular/css/text-transformation.css";
-@import "~@ionic/angular/css/flex-utils.css";
-
-@import "./theme/essential/theme";
-@import "./theme/awesome/theme";
-@import '~bootstrap/scss/bootstrap';
-.light-pink-text{
-  color: #eb9abb;
-}
-
-.dark-pink-text{
-  color: #a24689;
-}
-fa-icon{
-  font-size:40px;
-}
-html,
-body {
-  height: 100%;
 }

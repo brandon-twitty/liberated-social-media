@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AfterHoursEvent} from '../../models/afterHoursEvent';
+import {AfterHoursEvent} from '../../shared/models/afterHoursEvent';
 import {HttpClient} from '@angular/common/http';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import { v4 as uuidv4 } from 'uuid';

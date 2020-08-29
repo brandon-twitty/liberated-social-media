@@ -1,0 +1,101 @@
+ion-header {
+    //background-color: var(--ion-color-primary);
+    --min-height: 50px;
+}
+
+ion-toolbar {
+    --background: transparent;
+    min-height: 50px;
+}
+
+header.wdac-app-header {
+    background-color: var(--ion-color-primary);
+    color: var(--ion-color-primary-contrast);
+    margin: 0 calc(0px - var(--ion-padding));
+    padding: 50px var(--ion-padding) calc(2 * var(--ion-padding));
+}
+
+.wdac-go-back-link {
+    font-size: 1.142857rem;
+    ion-icon {
+        font-size: 1rem;
+        vertical-align: calc(0px - 0.14285714rem);
+    }
+}
+
+a.logo {
+    display: inline-block;
+    img, svg {
+        height: 25px;
+        width: auto;
+    }
+}
+
+.wdac-hamburger {
+    width: 50px;
+    height: 15px;
+    display: block;
+    position: relative;
+    span {
+        background: var(--ion-color-primary-contrast);
+        width: 30px;
+        height: 3px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 1px;
+        transition: all 0.3s ease-in-out;
+        &.line-2 {
+            top: 6px;
+            width: 25px;
+        }
+        &.line-3 {
+            top: 12px;
+            width: 20px;
+        }
+    }
+}
+
+.menu-content-open {
+    .wdac-hamburger {
+        span {
+            transition: all 0.3s ease-in-out;
+            width: 25px;
+            top: 6px;
+            transform-origin: 50% 50%;
+            &.line-1 {
+                transform: rotate(45deg);
+            }
+            &.line-2 {
+                width: 0px;
+            }
+            &.line-3 {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
+ion-content.menu-content {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        z-index: 777;
+        transition: all 0.3s ease-in-out;
+    }
+    &.menu-content-open {
+        &::before {
+            opacity: 0.3;
+            visibility: visible;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}

@@ -19,27 +19,35 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
 import {environment} from '../environment';
-import {AuthenticationService} from './services/authentication.service';
-import {HeaderModule} from './header/header.module';
+import {AuthenticationService} from './shared/services/authentication.service';
+
 import {FileSizeFormatPipe} from './file-size-format.pipe';
 import { UiModule } from './ui/ui.module';
 import {AngularFireStorageModule,
   AngularFireStorageReference,
   AngularFireUploadTask,
   } from '@angular/fire/storage';
+import {NavbarComponent} from './shared/components/navbar/navbar.component';
+import {OffcanvasComponent} from './shared/components/offcanvas/offcanvas.component';
+import {TextComponent} from './shared/components/fields/text/text.component';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent, FileSizeFormatPipe],
+  declarations: [AppComponent, FileSizeFormatPipe, NavbarComponent, OffcanvasComponent, TextComponent],
   entryComponents: [],
   imports: [BrowserModule,
     IonicModule.forRoot(), AppRoutingModule,
     FontAwesomeModule,
+      FormsModule,
+      HttpClientModule,
     ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
       AngularFireStorageModule,
-    AngularFirestoreModule, HeaderModule, UiModule
+    AngularFirestoreModule,
+    UiModule
   ],
   providers: [
     StatusBar,

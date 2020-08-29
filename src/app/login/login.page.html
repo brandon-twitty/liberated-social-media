@@ -1,20 +1,16 @@
-<ion-header>
-
-</ion-header>
-
 <ion-content>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row" style="padding-top: 75px;">
-      <div class="col-md-6 input-backdrop">
+      <div class="col-lg-6 col-sm-12 input-backdrop">
         <div class="ion-text-center logo">
-          <img width="80%" src="../../assets/images/logos/liberated-logo-512-white-letters.png">
+          <img width="40%" src="../../assets/images/logos/liberated-logo-512-white-letters.png">
           <h4 class="ion-text-center words-at-bottom text-color-white ion-padding">
             Meet like minded couples that are bound to be your new best friends & fill your fantasies
           </h4>
         </div>
-      </div>
-      <div class="col-md-6 input-backdrop">
-        <form>
+        <div style="padding-left: 200px; padding-right: 200px;">
+        <form >
+
           <ion-item lines="full" class="reg-input">
             <ion-label position="floating">Email</ion-label>
             <ion-input type="text" #email required></ion-input>
@@ -23,33 +19,30 @@
           <ion-item lines="full" class="reg-input" style="padding-bottom: 20px">
             <ion-label position="floating">Password</ion-label>
             <ion-input type="password" #password required></ion-input>
-          </ion-item>
-          <ion-button type="submit" (click)="signUp()" expand="block">Register</ion-button>
+          </ion-item >
+          <div class="btn-padding-bottom">
+            <ion-button  type="submit" (click)="goToRegistration()" expand="block">Register</ion-button>
+          </div>
           <ion-button color="danger" (click)="logIn(email, password)" expand="block">Login</ion-button>
           <form>
             <ion-row>
               <ion-col>
                 <ion-button
+                        style="padding-right: 0 !important; padding-left: 0!important;"
                         type="submit"
-                        color="danger"
+                        color="warning"
                         (click)="authService.GoogleAuth()"
                         expand="block">
                   Login with Google
                 </ion-button>
               </ion-col>
             </ion-row>
+
           </form>
         </form>
-
       </div>
-    </div>
-  </div>
-
-
-  <div class="container">
-    <div class="row ion-text-center">
-
-      <div class="col-md-12">
+      </div>
+      <div class="col-lg-6 col-sm-12 input-backdrop">
         <video class="founders-video" controls>
           <source src="https://firebasestorage.googleapis.com/v0/b/liberated-kind.appspot.com/o/the-liberated-kind.mp4?alt=media&token=ff591c19-1d62-47bd-b364-c04a9322167a" type="video/mp4">
 
@@ -58,5 +51,4 @@
       </div>
     </div>
   </div>
-
 </ion-content>

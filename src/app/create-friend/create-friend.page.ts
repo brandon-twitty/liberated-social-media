@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {AuthenticationService} from '../services/authentication.service';
+import {AuthenticationService} from '../shared/services/authentication.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {CameraResultType, Plugins} from '@capacitor/core';
 import {AngularFireStorage, AngularFireUploadTask} from '@angular/fire/storage';
 import {Observable} from 'rxjs';
-import {ImageData} from '../models/image';
+import {ImageData} from '../shared/models/image';
 import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
 import {finalize, tap} from 'rxjs/operators';
 

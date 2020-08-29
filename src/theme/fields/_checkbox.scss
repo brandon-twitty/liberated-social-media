@@ -1,0 +1,17 @@
+ion-checkbox {
+    --checkmark-width: 5px;
+    --size: var(--wdac-block-half);
+    --border-radius: 8px;
+    --border-color: transparent;
+    --background: var(--ion-color-medium-tint);
+    --border-width: 5px;
+
+    & ~ ion-label {
+        font-weight: 400;
+        overflow: visible !important;
+        white-space: normal !important;
+        text-overflow: intial !important;
+        font-size: 1rem !important;
+        padding: 0 0 0 var(--ion-padding);
+    }
+}

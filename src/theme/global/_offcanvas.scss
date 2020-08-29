@@ -1,0 +1,8 @@
+ion-menu {
+    --ion-item-background: var(--ion-color-primary);
+    ion-item {
+        color: var(--ion-color-primary-contrast);
+        font-size: 1.2857rem;
+        font-weight: 600;
+    }
+}

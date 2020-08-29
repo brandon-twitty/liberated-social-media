@@ -1,0 +1,5 @@
+<div class="text wdac-fieldset {{ requiredClass() }}">
+  <label class="wdac-label" for="{{ name }}">{{ title }}</label>
+  <input [(ngModel)]="value" name="{{ name }}" class="wdac-field" type="{{ type }}"  id="{{ name }}" placeholder="{{ placeholder }}" value="{{ value }}" [required]="required" />
+  <a class="wdac-clear-field"><i class="ion-close-round"></i></a>
+</div>

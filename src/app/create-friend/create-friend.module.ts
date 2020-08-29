@@ -10,7 +10,7 @@ import { CreateFriendPage } from './create-friend.page';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFireDatabaseModule} from '@angular/fire/database';
 import {AngularFirestoreModule} from '@angular/fire/firestore';
-import {HeaderModule} from '../header/header.module';
+
 import {FileSizeFormatPipe} from '../file-size-format.pipe';
 import {TakePicComponent} from './take-pic/take-pic.component';
 
@@ -21,7 +21,7 @@ import {TakePicComponent} from './take-pic/take-pic.component';
     IonicModule,
     AngularFireAuthModule,
     AngularFireDatabaseModule,
-    AngularFirestoreModule, HeaderModule,
+    AngularFirestoreModule,
     CreateFriendPageRoutingModule
   ],
   declarations: [CreateFriendPage,  TakePicComponent]

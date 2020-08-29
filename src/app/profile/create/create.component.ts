@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as firebase from 'firebase';
-import {AfterHoursEvent} from '../../models/afterHoursEvent';
+import {AfterHoursEvent} from '../../shared/models/afterHoursEvent';
 import {FormBuilder, FormGroup} from '@angular/forms';
-import {User} from '../../models/user';
+import {User} from '../../shared/models/user';
 
 
 

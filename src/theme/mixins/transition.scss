@@ -1,0 +1,3 @@
+@mixin transition($selector: all, $time: 0.3s, $function: ease-in-out) {
+    transition: $selector $time $function;
+}

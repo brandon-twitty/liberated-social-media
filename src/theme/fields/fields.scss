@@ -1,0 +1,144 @@
+@import "../mixins/transition";
+
+.wdac-fieldset {
+    position: relative;
+    margin: 0 auto;
+    padding: calc(2 * var(--ion-padding)) 0 0;
+    .wdac-label {
+        display: block;
+        font-weight: 600;
+        font-size: 1.28571429rem;
+        line-height: 1.25;
+    }
+    .wdac-field {
+        display: block;
+        border: none;
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid var( --ion-color-medium-tint);
+        outline: none !important;
+        font-size: 1.14285714rem;
+        font-weight: 400;
+        line-height: 1.25;
+        padding: 5px 0;
+        @include transition();
+        &:focus {
+            border-color: var(--ion-color-medium);
+            @include transition();
+        }
+    }
+    &.required {
+        .wdac-label {
+            &::after {
+                content: " *";
+                color: var(--ion-color-danger);
+            }
+        }
+    }
+}
+
+ion-item {
+    &.item-label, &.item-input {
+        position: relative;
+        padding: calc(2 * var(--ion-padding)) 0 0;
+        --padding-start: 0;
+        --padding-end: 0;
+        --inner-border-width: 0 0 1px 0;
+        --border-color: var(--ion-color-medium-tint) !important;
+        @include transition();
+        &.item-has-focus {
+            --border-color: var(--ion-color-medium) !important;
+            --highlight-background: var(--ion-color-medium);
+            @include transition();
+            ion-label {
+                color: var(--ion-color-dark) !important;
+            }
+        }
+        &:not(.item-input) {
+            --border-color: transparent !important;
+            --inner-border-width: 0 0 0 0;
+            &.item-has-focus {
+                --highlight-background: transparent;
+                --border-color: transparent !important;
+            }
+        }
+        
+        ion-badge {
+            position: absolute;
+            right: 0;
+            top: 20px;
+            margin: 0;
+            border-radius: 2px;
+            font-size: 0.85714286rem;
+            line-height: 1rem;
+            padding: 1px 8px;
+            text-transform: lowercase;
+            font-weight: 900;
+        }
+        &.danger {
+            --border-color: var(--ion-color-danger) !important;
+            &.item-has-focus {
+                --border-color: var(--ion-color-danger-shade) !important;
+                --highlight-background: var(--ion-color-danger-shade) !important;
+            }
+        }
+    }
+}
+ion-label {
+    padding: 0;
+    margin: 0 auto !important;
+    font-weight: 600;
+    display: block;
+    width: 100% !important;
+    font-size: 1.28571429rem !important;
+    color: var(--ion-color-dark);
+    &.item-has-focus {
+        color: var(--ion-color-dark) !important;
+    }
+    &[required] {
+        &::after {
+            content: " *";
+            color: var(--ion-color-danger);
+        }
+    }
+}
+
+ion-input, ion-textarea {
+    --placeholder-color: var( --ion-color-medium);
+    --placeholder-opacity: 1;
+    input, textarea {
+        padding-bottom: 5px !important;
+        padding-top: 5px !important;
+    }
+    .input-clear-icon {
+        background-image: none !important;
+        position: relative;
+        &::before, &::after {
+            content: "";
+            background-color: var(--ion-color-medium-shade);
+            width: 10px;
+            height: 2px;
+            display: block;
+            transform-origin: 50% 50%;
+            position: absolute;
+            top: calc(50% - 1px);
+            right: 0;
+            transform: rotate(45deg);
+            @include transition;
+        }
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+    &.has-value {
+        .input-clear-icon {
+            visibility: visible !important;
+        }
+    }
+}
+form {
+    padding: 10px;
+}
+@import "text";
+@import "select";
+@import "checkbox";

@@ -8,7 +8,6 @@ import { ProfilePageRoutingModule } from './profile-routing.module';
 
 import { ProfilePage } from './profile.page';
 import {CreateComponent} from './create/create.component';
-import {HeaderModule} from '../header/header.module';
 
 @NgModule({
     imports: [
@@ -17,7 +16,7 @@ import {HeaderModule} from '../header/header.module';
         ReactiveFormsModule,
         IonicModule,
         ProfilePageRoutingModule,
-        HeaderModule
+
     ],
   declarations: [ProfilePage, CreateComponent]
 })
