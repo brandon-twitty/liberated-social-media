@@ -13,9 +13,9 @@ import {Router} from '@angular/router';
 export class UploadProfileImgPage implements OnInit {
     selectedImage: any = null;
     private basePath = '/images';
-    url:string;
-    id:string;
-    file:string;
+    url: string;
+    id: string;
+    file: string;
   title = 'cloudsStorage';
   selectedFile: File = null;
   fb;
@@ -29,12 +29,13 @@ export class UploadProfileImgPage implements OnInit {
     }*/
 
     showPreview(event) {
-    let n = Date.now();
-    const file = event.target.files[0];
-    const filePath = `profileImages/${n}`;
-    const fileRef = this.storage.ref(filePath);
-    const task = this.storage.upload(`profileImages/${n}`, file);
-    task
+        this.selectedImage = event.target.files[0];
+        const n = Date.now();
+        const file = event.target.files[0];
+        const filePath = `profileImages/${n}`;
+        const fileRef = this.storage.ref(filePath);
+        const task = this.storage.upload(`profileImages/${n}`, file);
+        task
         .snapshotChanges()
         .pipe(
             finalize(() => {
@@ -55,7 +56,7 @@ export class UploadProfileImgPage implements OnInit {
         });
   }
     save() {
-        let name = this.selectedImage.name;
+        const name = this.selectedImage.name;
         const fileRef = this.storage.ref(name);
         this.storage.upload(name, this.selectedImage).snapshotChanges().pipe(
             finalize(() => {
