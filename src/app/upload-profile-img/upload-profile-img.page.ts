@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {finalize} from 'rxjs/operators';
 import {AngularFireStorage} from '@angular/fire/storage';
 import {Observable} from 'rxjs';
-
+import {FileService} from '../services/file.service';
 import {Router} from '@angular/router';
 import {FileService} from '../shared/services/file.service';
 import {User} from '../shared/models/user';
@@ -56,12 +56,9 @@ export class UploadProfileImgPage implements OnInit {
                 if (url) {
                     console.log(url);
 
-                }
-            });
-    }
-    /*showPreview(event: any) {
-        this.selectedImage = event.target.files[0];
-    }*/
+          }
+        });
+  }
     save() {
         let n = Date.now();
         // const name = this.selectedImage.name;
@@ -84,7 +81,8 @@ export class UploadProfileImgPage implements OnInit {
             this.router.navigate(['wizard']);
         });
     }
-    view() {
+    view(){
         this.fileService.getImage(this.file);
     }
+
 }
