@@ -8,6 +8,12 @@ body {
     line-height: 1.7;
     margin: 0;
 }
+form{
+    padding: 15px;
+}
+select{
+    --border-radius: 8px;
+}
 #torso {
     overflow: hidden;
 }
@@ -404,6 +410,7 @@ textarea.wdac-input {
 .cd-margin-right {
     margin-right: 15px;
 }
+
 .wdac-button {
     -webkit-appearance: none;
     border: none;
@@ -467,16 +474,16 @@ textarea.wdac-input {
     transition: all 0.3s ease-in-out;
 }
 .cd-avatar {
-    width: 300px;
-    height: 300px;
+    width: 150px;
+    height: 150px;
     display: block;
-    margin: -25px auto 0;
+   // margin: -25px auto 0;
     background: #fff;
     -webkit-box-shadow: 0 1px 15px -5px rgba(0, 0, 0, 0.3);
     box-shadow: 0 1px 15px -5px rgba(0, 0, 0, 0.3);
     border-radius: 50%;
     overflow: hidden;
-    position: relative;
+   // position: relative;
     bottom: -40px;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;

@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {finalize} from 'rxjs/operators';
 import {AngularFireStorage} from '@angular/fire/storage';
 import {Observable} from 'rxjs';
-import {FileService} from '../services/file.service';
 import {Router} from '@angular/router';
-import {FileService} from '../shared/services/file.service';
 import {User} from '../shared/models/user';
 import {AuthenticationService} from '../shared/services/authentication.service';
+import {FileService} from '../shared/services/file.service';
 
 @Component({
   selector: 'app-upload-profile-img',
@@ -25,6 +24,7 @@ export class UploadProfileImgPage implements OnInit {
     selectedFile: File = null;
     fb;
     downloadURL: Observable<string>;
+    // tslint:disable-next-line:max-line-length
     constructor(private storage: AngularFireStorage, private fileService: FileService, private router: Router, private authService: AuthenticationService){
     }
 

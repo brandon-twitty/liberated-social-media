@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- Side menu button -->
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content ><!--class="reg-input d-flex flex-column h-100"-->
+
+  <div class="container">
+    <div class="row" style="padding-top: 75px;">
+      <div class="col-md-6 input-backdrop">
+        <div class="ion-text-center logo">
+          <img width="80%" src="../../assets/images/logos/liberated-logo-512-white-letters.png">
+          <h4 class="ion-text-center words-at-bottom text-color-white ion-padding">
+            Meet like minded couples that are bound to be your new best friends & fill your fantasies
+          </h4>
+        </div>
+      </div>
+      <div class="col-md-6 input-backdrop">
+        <form>
+          <ion-item lines="full" class="reg-input">
+            <ion-label position="stacked">Email</ion-label>
+            <ion-input type="text" #email required></ion-input>
+          </ion-item>
+
+          <ion-item lines="full" class="reg-input" style="padding-bottom: 20px">
+            <ion-label position="stacked">Password</ion-label>
+            <ion-input type="password" #password required></ion-input>
+          </ion-item>
+          <ion-button type="submit" (click)="signIn(email, password)" expand="block">Sign In</ion-button>
+          <div class="wdac-text-center">
+            <a class="wdac-text-center" style="color: #eb9abb" routerLink="/sign-in">Already have an account go login page</a>
+          </div>
+          <!--  <ion-button color="danger" (click)="logIn(email, password)" expand="block">Login</ion-button> -->
+          <!--<form class="googleForm">
+              <ion-row>
+                  <ion-col>
+                      <ion-button
+                              type="submit"
+                              color="danger"
+                              (click)="authService.GoogleAuth()"
+                              expand="block">
+                          Login with Google
+                      </ion-button>
+                  </ion-col>
+              </ion-row>
+          </form>-->
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+</ion-content>

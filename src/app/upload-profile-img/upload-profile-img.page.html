@@ -1,11 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- Side menu button -->
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
 
+  </ion-toolbar>
+</ion-header>
 <ion-content class="ion-padding">
-  <header class="wdac-app-header">
-    <p class="uk-margin-remove-bottom uk-margin-remove-top"><a class="wdac-go-back-link uk-text-lowercase wdac-text-white">
-      <ion-icon name="arrow-back-outline"></ion-icon> Quickstart</a></p>
-    <h1 class="uk-h1 wdac-text-white uk-margin-remove-bottom uk-margin-remove-top">Upload a Photo</h1>
-    <!-- <p class="wdac-text-white uk-margin-small-top uk-margin-remove-bottom">Optional. Padding beneath is the same as normal page. Pink height based on content length.</p>-->
-  </header>
+
   <div class="row ion-text-center">
     <div class="col-12 ">
       <div class="container" *ngIf="downloadURL | async; let url">

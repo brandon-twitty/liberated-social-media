@@ -6,47 +6,47 @@ import {AngularFireDatabase, AngularFireList} from '@angular/fire/database';
   providedIn: 'root'
 })
 export class FileService {
-  imageDetailList: AngularFireList<any>;
-  fileList: any[];
-  dataSet: Data = {
-    id: '',
-    url: ''
-  };
-  msg = 'error';
-  constructor(@Inject(AngularFireDatabase) private firebase: AngularFireDatabase) { }
-  getImageDetailList() {
-    this.imageDetailList = this.firebase.list('imageDetails');
-  }
-
-  insertImageDetails(id, url) {
-    this.dataSet = {
-      id: id,
-      url: url
+    imageDetailList: AngularFireList<any>;
+    fileList: any[];
+    dataSet: Data = {
+        id: '',
+        url: ''
     };
-    this.imageDetailList.push(this.dataSet);
-  }
+    msg = 'error';
+    constructor(@Inject(AngularFireDatabase) private firebase: AngularFireDatabase) { }
+    getImageDetailList() {
+        this.imageDetailList = this.firebase.list('imageDetails');
+    }
 
-  getImage(value){
-    this.imageDetailList.snapshotChanges().subscribe(
-        list => {
-          this.fileList = list.map(item => { return item.payload.val();  });
-          this.fileList.forEach(element => {
-            if (element.id === value) {
-              this.msg = element.url;
+    insertImageDetails(id, url) {
+        this.dataSet = {
+            id: id,
+            url: url
+        };
+        this.imageDetailList.push(this.dataSet);
+    }
+
+    getImage(value){
+        this.imageDetailList.snapshotChanges().subscribe(
+            list => {
+                this.fileList = list.map(item => { return item.payload.val();  });
+                this.fileList.forEach(element => {
+                    if (element.id === value) {
+                        this.msg = element.url;
+                    }
+                });
+                if (this.msg === 'error') {
+                    alert('No record found');
+                }
+                else{
+                    window.open(this.msg);
+                    this.msg = 'error';
+                }
             }
-          });
-          if (this.msg === 'error') {
-            alert('No record found');
-          }
-          else{
-            window.open(this.msg);
-            this.msg = 'error';
-          }
-        }
-    );
-  }
+        );
+    }
 }
 export interface Data {
-  id: string;
-  url: string;
+    id: string;
+    url: string;
 }

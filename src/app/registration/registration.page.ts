@@ -28,6 +28,7 @@ export class RegistrationPage implements OnInit {
             this.authService.SignIn(this.newUser.email, this.newUser.password).then((u => {
                 this.authService.SendVerificationMail().then(( res => {
                     console.log('sent verification email', res);
+                    this.goToLogin();
                 }));
             }));
         });
@@ -36,7 +37,7 @@ export class RegistrationPage implements OnInit {
     }
 
     goToLogin() {
-        this.router.navigateByUrl('/login');
+        this.router.navigateByUrl('/sign-in');
     }
 
 }

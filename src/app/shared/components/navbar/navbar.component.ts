@@ -1,4 +1,4 @@
-import { OffcanvasService } from './../../services/offcanvas.service';
+import { OffcanvasService } from '../../services/offcanvas.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

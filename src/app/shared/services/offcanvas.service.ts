@@ -15,7 +15,8 @@ export class OffcanvasService {
     console.log('Triggered');
   }
   goToRegistration(){
-    this.router.navigate(['register']);
+    console.log('going to registration page');
+    this.router.navigateByUrl('registration');
   }
   goToDashboard(){
     this.router.navigate(['dashboard']);

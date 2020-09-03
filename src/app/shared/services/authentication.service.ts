@@ -44,7 +44,7 @@ export class AuthenticationService {
   SendVerificationMail() {
     return this.ngFireAuth.currentUser.then(u => u.sendEmailVerification())
         .then(() => {
-          this.router.navigate(['verify-email']);
+          this.router.navigate(['']);
         });
   }
 

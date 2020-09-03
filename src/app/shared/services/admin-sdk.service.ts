@@ -10,6 +10,7 @@ import {Observable} from 'rxjs';
 export class AdminSdkService {
   userApi = ' https://us-central1-liberated-kind.cloudfunctions.net/api/users';
   user: User = new User();
+  users: [];
   constructor(private http: HttpClient) { }
   httpOptions = {
     headers: new HttpHeaders({
@@ -20,5 +21,10 @@ export class AdminSdkService {
     JSON.stringify(user);
     console.log('service call to firebase', user);
     return this.http.post(`${this.userApi}`, user, this.httpOptions);
+  }
+  getAllUsers() {
+    return this.http.get(`${this.userApi}`, this.httpOptions).subscribe(res => {
+      console.log(res);
+    });
   }
 }

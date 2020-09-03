@@ -3,9 +3,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
 
-    {
-        path: '',
-        loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+
+  {
+    path: '',
+        loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
+    pathMatch: 'full'
     },
         {
             path: 'registration',
@@ -71,7 +73,27 @@ const routes: Routes = [
   {
     path: 'intro-prof',
     loadChildren: () => import('./intro-prof/intro-prof.module').then( m => m.IntroProfPageModule)
+  },  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+  },
+  {
+    path: 'sign-in',
+    loadChildren: () => import('./sign-in/sign-in.module').then( m => m.SignInPageModule)
+  },
+  {
+    path: 'chat',
+    loadChildren: () => import('./chat/chat.module').then( m => m.ChatPageModule)
+  },
+  {
+    path: 'list-of-profiles',
+    loadChildren: () => import('./list-of-profiles/list-of-profiles.module').then( m => m.ListOfProfilesPageModule)
+  },
+  {
+    path: 'search',
+    loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
   }
+
 
 
 

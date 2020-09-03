@@ -1,22 +1,24 @@
 <ion-header>
   <ion-toolbar>
+    <!-- Side menu button -->
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-menu-button autoHide="false"></ion-menu-button>
     </ion-buttons>
-    <ion-title>Verify-email</ion-title>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-grid>
-    <ion-row>
-      <h2>Welcome to Liberated Kind</h2>
-      <p>
-        Please check your email and click on the link to verify your email address.
-      </p>
+  <div class="row wdac-text-center">
+    <h2>Welcome to Liberated Kind</h2>
+    <p>
+      if you have not received verified your email address, please click the link to finish registration. If you have not received a verification email please click resend button below
+    </p>
+    <ion-item>
       <ion-button type="submit" (click)="authService.SendVerificationMail()" expand="block">
         Resend Verification Email
       </ion-button>
-    </ion-row>
-  </ion-grid>
+    </ion-item>
+  </div>
+
 </ion-content>

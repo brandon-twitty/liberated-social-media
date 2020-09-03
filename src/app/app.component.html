@@ -1,8 +1,51 @@
 <ion-app>
-  <app-navbar></app-navbar>
-  <app-offcanvas></app-offcanvas>
-  <ion-content id="content">
+  <ion-menu side="start" menuId="first" contentId="content1" class="cd-offcanvas-menu">
+    <!--<ion-header [translucent]="true" >
 
-    <ion-router-outlet></ion-router-outlet>
-  </ion-content>
+      <ion-toolbar  color="header">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>-->
+    <ion-content  color="primary" primary>
+      <ion-list auto-hide="false" color="primary" primary *ngFor="let pages of navigate">
+        <ion-menu-toggle auto-hide="true">
+          <ion-item [routerLink]="pages.url" routerDirection="forward">
+            <ion-icon [name]="pages.icon" slot="start"></ion-icon>
+            {{pages.title}}
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="content1" main></ion-router-outlet>
+  <!--<ion-content id="content">
+    <ion-menu side="end" type="reveal" menuId="offcanvas-menu" contentId="content1" class="cd-offcanvas-menu">
+      <ion-content color="primary" primary>
+        <ion-list color="primary" primary>
+          <ion-item>
+            <a class="wdac-go-back-link uk-text-lowercase wdac-text-white" (click)=offCanvas.goToRegistration()>Change66 stuff</a>
+          </ion-item>
+          <ion-item>
+            <a class="wdac-go-back-link uk-text-lowercase wdac-text-white" (click)="goToDashboard">Dashboard</a>
+          </ion-item>
+          <ion-item>
+            <a class="wdac-go-back-link uk-text-lowercase wdac-text-white" (click)="goToOrderCards">Order Cards</a>
+          </ion-item>
+          <ion-item>
+            <a class="wdac-go-back-link uk-text-lowercase wdac-text-white" (click)="goToOrderHistory">Order History</a>
+          </ion-item>
+          <ion-item>
+            <a class="wdac-go-back-link uk-text-lowercase wdac-text-white" (click)="goToBillingHistory">Billing Account</a>
+          </ion-item>
+          <ion-item>
+            <a class="wdac-go-back-link uk-text-lowercase wdac-text-white" (click)="goToSupport">Support</a>
+          </ion-item>
+          <ion-item>
+            <a class="wdac-go-back-link uk-text-lowercase wdac-text-white" (click)="authService.SignOut()">Logout</a>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="content1" main></ion-router-outlet>
+  </ion-content>-->
 </ion-app>

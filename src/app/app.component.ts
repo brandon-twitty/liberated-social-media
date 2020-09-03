@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import {NavigationEnd, Router, RouterEvent} from '@angular/router';
 import { Plugins } from '@capacitor/core';
+import {OffcanvasService} from './shared/services/offcanvas.service';
 
 @Component({
   selector: 'app-root',
@@ -14,14 +15,21 @@ import { Plugins } from '@capacitor/core';
 export class AppComponent implements OnInit {
   navigate: any;
   constructor(
-    private platform: Platform,
-    private splashScreen: SplashScreen,
-    private statusBar: StatusBar,
-    private menuCtrl: MenuController,
-    private router: Router
+      private menu: MenuController,
+      private platform: Platform,
+      private splashScreen: SplashScreen,
+      private statusBar: StatusBar,
+      private menuCtrl: MenuController,
+      private router: Router,
+      private offCanvas: OffcanvasService
   ) {
     this.sideMenu();
     this.initializeApp();
+  }
+  open() {
+    this.menu.enable(true, 'offcanvas-menu');
+    this.menu.open('offcanvas-menu');
+    console.log('Triggered');
   }
   ngOnInit() {
     this.router.events.subscribe((event: RouterEvent) => {
@@ -39,19 +47,24 @@ export class AppComponent implements OnInit {
   sideMenu(){
     this.navigate = [
       {
-        title: 'About Us',
-        url: '/about-us',
-        icon: 'home'
-      },
-      {
-        title: 'Home',
-        url: '/grid-tiles',
-        icon: 'home'
-      },
-      {
         title: 'Profile',
         url: '/profile',
-        icon: 'profile'
+        icon: 'home'
+      },
+      {
+        title: 'Chat',
+        url: '/chat',
+        icon: 'chatbubbles-outline'
+      },
+      {
+        title: 'List of Friends',
+        url: '/list-of-profiles',
+        icon: 'list-outline'
+      },
+      {
+        title: 'Search',
+        url: '/search',
+        icon: 'search-outline'
       },
     ];
   }
