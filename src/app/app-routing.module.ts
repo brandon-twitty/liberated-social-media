@@ -73,7 +73,8 @@ const routes: Routes = [
   {
     path: 'intro-prof',
     loadChildren: () => import('./intro-prof/intro-prof.module').then( m => m.IntroProfPageModule)
-  },  {
+  },
+  {
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   },

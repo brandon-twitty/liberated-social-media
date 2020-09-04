@@ -12,13 +12,20 @@
   <div class="row wdac-text-center">
     <h2>Welcome to Liberated Kind</h2>
     <p>
-      if you have not received verified your email address, please click the link to finish registration. If you have not received a verification email please click resend button below
+     Thank you for verifying your email address, please click the link to finish registration.
     </p>
     <ion-item>
       <ion-button type="submit" (click)="authService.SendVerificationMail()" expand="block">
         Resend Verification Email
       </ion-button>
     </ion-item>
+    <p>If you have not received a verification email please click resend button below </p>
+    <ion-item>
+      <ion-button type="submit" (click)="authService.SendVerificationMail()" expand="block">
+        Resend Verification Email
+      </ion-button>
+    </ion-item>
+
   </div>
 
 </ion-content>

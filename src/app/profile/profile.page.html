@@ -9,14 +9,14 @@
 <ion-content>
   <ion-card>
     <ion-card-content class="wdac-text-center wdac-container">
-      <form>
+      <form [formGroup]="profileForm">
         <div class="row ion-text-center">
           <div class="col-12 ">
             <div class="container" *ngIf="downloadURL | async; let url">
               <figure class="cd-avatar">
                 <img [src]="url" alt="Image from AngularFireStorage">
               </figure>
-
+            <ion-input class="uk-hidden" formControlName="imageUrl" ></ion-input>
             </div>`
             <br><br>
             <ion-input type="file" (change)="showPreview($event)"></ion-input>
@@ -24,11 +24,15 @@
         </div>
         <ion-item>
           <ion-label position="stacked" required="true">User Handle</ion-label>
-          <ion-input clearInput required="true"  placeholder="Display Name"></ion-input>
+          <ion-input clearInput required="true" formControlName="displayName" placeholder="Display Name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" required="true">Zip Code</ion-label>
+          <ion-input clearInput required="true" formControlName="zipCode" placeholder="Display Name"></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-label position="stacked" required="true">Select Profile Type</ion-label>
+          <ion-label position="stacked" formControlName="profileType" required="true">Select Profile Type</ion-label>
           <ion-select interface="action-sheet" placeholder="Select a Type">
             <ion-select-option value="a">Couple Man and Woman</ion-select-option>
             <ion-select-option value="b">Single Female</ion-select-option>
@@ -37,11 +41,11 @@
         </ion-item>
         <ion-item>
           <ion-label position="stacked" required="true">User's 1 Name</ion-label>
-          <ion-input clearInput required="true" placeholder="Females Name"></ion-input>
+          <ion-input clearInput required="true" formControlName="userOneName" placeholder="Females Name"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked" required="true">Body Type</ion-label>
-          <ion-select interface="action-sheet" placeholder="Select a Type">
+          <ion-select interface="action-sheet" formControlName="user1BodyType"  placeholder="Select a Type">
             <ion-select-option value="a">Athletic</ion-select-option>
             <ion-select-option value="b">Extra Padding</ion-select-option>
             <ion-select-option value="c">Sexy AF</ion-select-option>
@@ -49,7 +53,7 @@
         </ion-item>
         <ion-item>
           <ion-label position="stacked">User'2 2 Name</ion-label>
-          <ion-input clearInput  placeholder="Males Name"></ion-input>
+          <ion-input clearInput formControlName="userTwoName"  placeholder="Males Name"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">Body Type</ion-label>

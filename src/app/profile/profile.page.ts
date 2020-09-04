@@ -6,6 +6,7 @@ import {FileService} from '../shared/services/file.service';
 import {Router} from '@angular/router';
 import {AuthenticationService} from '../shared/services/authentication.service';
 import {finalize} from 'rxjs/operators';
+import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-profile',
@@ -24,14 +25,22 @@ export class ProfilePage implements OnInit {
   selectedFile: File = null;
   fb;
   downloadURL: Observable<string>;
+  profileForm: FormGroup;
   // tslint:disable-next-line:max-line-length
-  constructor(private storage: AngularFireStorage, private fileService: FileService, private router: Router, private authService: AuthenticationService){
+  constructor(private storage: AngularFireStorage, private fileService: FileService, private router: Router, private authService: AuthenticationService, private formBuilder: FormBuilder){
   }
 
   ngOnInit() {
     this.fileService.getImageDetailList();
     this.userData = JSON.parse(localStorage.getItem('user'));
     console.log('user logged in', this.userData);
+  }
+  createProfileForm(){
+      this.profileForm = this.formBuilder.group({
+        displayName: [''],
+      });
+
+
   }
   showPreview(event) {
     let n = Date.now();

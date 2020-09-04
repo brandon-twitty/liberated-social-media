@@ -37,7 +37,7 @@ export class RegistrationPage implements OnInit {
     }
 
     goToLogin() {
-        this.router.navigateByUrl('/sign-in');
+        this.router.navigateByUrl('/verify-email');
     }
 
 }
