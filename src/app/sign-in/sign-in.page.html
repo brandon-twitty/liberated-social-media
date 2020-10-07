@@ -31,9 +31,12 @@
             <ion-label position="stacked">Password</ion-label>
             <ion-input type="password" #password required></ion-input>
           </ion-item>
-          <ion-button type="submit" (click)="signIn(email, password)" expand="block">Sign In</ion-button>
+
+          <ion-button type="submit" (click)="SignIn(email, password)" expand="block">Sign In</ion-button>
           <div class="wdac-text-center">
-            <a class="wdac-text-center" style="color: #eb9abb" routerLink="/sign-in">Already have an account go login page</a>
+            <ion-item lines="full" class="reg-input" style="padding-top: 20px">
+            <a class="wdac-text-center" style="color: #eb9abb" routerLink="/registration">Need an accout? Go Registration Page</a>
+            </ion-item>
           </div>
           <!--  <ion-button color="danger" (click)="logIn(email, password)" expand="block">Login</ion-button> -->
           <!--<form class="googleForm">

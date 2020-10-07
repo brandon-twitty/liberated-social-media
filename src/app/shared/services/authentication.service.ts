@@ -37,7 +37,9 @@ export class AuthenticationService {
 
   // Register user with email/password
   RegisterUser(email, password) {
-    return this.ngFireAuth.createUserWithEmailAndPassword(email, password);
+    return this.ngFireAuth.createUserWithEmailAndPassword(email, password).then(() => {
+
+    });
   }
 
   // Email verification when new user register

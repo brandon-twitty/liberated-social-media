@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import {NavigationEnd, Router, RouterEvent} from '@angular/router';
 import { Plugins } from '@capacitor/core';
 import {OffcanvasService} from './shared/services/offcanvas.service';
+import {AuthenticationService} from './shared/services/authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,8 @@ export class AppComponent implements OnInit {
       private statusBar: StatusBar,
       private menuCtrl: MenuController,
       private router: Router,
-      private offCanvas: OffcanvasService
+      private offCanvas: OffcanvasService,
+      private authenticationService: AuthenticationService
   ) {
     this.sideMenu();
     this.initializeApp();
@@ -66,6 +68,11 @@ export class AppComponent implements OnInit {
         url: '/search',
         icon: 'search-outline'
       },
+      {
+        title: 'Sign Out',
+        url: this.authenticationService.SignOut(),
+        icon: 'log-out-outline'
+      }
     ];
   }
 }

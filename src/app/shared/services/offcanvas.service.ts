@@ -18,6 +18,10 @@ export class OffcanvasService {
     console.log('going to registration page');
     this.router.navigateByUrl('registration');
   }
+  goToProfile(){
+    console.log('going to profile page');
+    this.router.navigateByUrl('profile');
+  }
   goToDashboard(){
     this.router.navigate(['dashboard']);
   }

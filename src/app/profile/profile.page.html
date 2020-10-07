@@ -1,15 +1,24 @@
-<ion-header>
+<ion-header translucent="true">
   <ion-toolbar>
     <!-- Side menu button -->
     <ion-buttons slot="start">
       <ion-menu-button autoHide="false"></ion-menu-button>
     </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 <ion-content>
   <ion-card>
-    <ion-card-content class="wdac-text-center wdac-container">
-      <form [formGroup]="profileForm">
+
+    <ion-card-content class="wdac-text-center wdac-container ion-padding">
+      <ion-card-title>
+        <div class="uk-logo ">
+          <img src="src/assets/images/logos/liberated-letters.png">
+        </div>
+        <p>finish creating profile to find new matches</p>
+      </ion-card-title>
+
+      <form [formGroup]="profileForm" (ngSubmit)="createProfile()">
         <div class="row ion-text-center">
           <div class="col-12 ">
             <div class="container" *ngIf="downloadURL | async; let url">

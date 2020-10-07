@@ -27,6 +27,7 @@ export class ProfilePage implements OnInit {
   downloadURL: Observable<string>;
   profileForm: FormGroup;
   // tslint:disable-next-line:max-line-length
+  private boolean: any;
   constructor(private storage: AngularFireStorage, private fileService: FileService, private router: Router, private authService: AuthenticationService, private formBuilder: FormBuilder){
   }
 
@@ -38,12 +39,27 @@ export class ProfilePage implements OnInit {
   createProfileForm(){
       this.profileForm = this.formBuilder.group({
         displayName: [''],
+        imageUrl: [''],
+        profileType: [''],
+        userOneName: [''],
+        user1BodyType: [''],
+        userTwoName: [''],
+        user2BodyType: [''],
+        blockSingleMales: false,
+        fullSwap: false,
+        softSwap: false,
+        decribeYourself: [''],
+        YourInterestsInMatches: [''],
+        additionalInfo: [''],
       });
 
 
   }
+  createProfile(){
+    // do some stuff
+  }
   showPreview(event) {
-    let n = Date.now();
+    const n = Date.now();
     this.file = event.target.files[0];
     const filePath = `profileImages/${n}`;
     const fileRef = this.storage.ref(filePath);
@@ -69,7 +85,7 @@ export class ProfilePage implements OnInit {
         });
   }
   save() {
-    let n = Date.now();
+    const n = Date.now();
     // const name = this.selectedImage.name;
     const filePath = `profileImages/${n}`;
     const fileRef = this.storage.ref(filePath);

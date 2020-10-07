@@ -8,24 +8,28 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="row wdac-text-center">
-    <h2>Welcome to Liberated Kind</h2>
-    <p>
-     Thank you for verifying your email address, please click the link to finish registration.
+<ion-content class="ion-padding-top">
+ <div class="container">
+  <div class="row wdac-text-center wdac-text-center wdac-text-white wdac-container">
+    <h3 class="wdac-text-thin">Welcome to Liberated Kind</h3>
+    <p style="background-color: rgba(0,0,0,0.3)" class="ion-padding-bottom">
+     Thank you please verify your email address in the link sent to the email You registered with. Now we GET TO to fill out tHE fun part of the profiles! if you didnt receive and email check spmam or resend utilising the link below
     </p>
-    <ion-item>
-      <ion-button type="submit" (click)="authService.SendVerificationMail()" expand="block">
-        Resend Verification Email
-      </ion-button>
-    </ion-item>
-    <p>If you have not received a verification email please click resend button below </p>
-    <ion-item>
-      <ion-button type="submit" (click)="authService.SendVerificationMail()" expand="block">
-        Resend Verification Email
-      </ion-button>
-    </ion-item>
+  </div>
+   <div>
+     <ion-item class="text-center">
+       <ion-button  type="submit" expand="block" routerLink="/sign-in"> Resend Verification Email </ion-button><
+     </ion-item>
+     <p  style="background-color: rgba(0,0,0,0.3)" class="ion-padding-bottom">Click Here to finish your profile </p>
+     <ion-item class="text-center">
+       <ion-button type="submit" (click)="offcanvasService.goToProfile()" expand="block">
+         Resend Verification Email
+       </ion-button>
+     </ion-item>
+   </div>
+
+
 
   </div>
-
+ </div>>
 </ion-content>

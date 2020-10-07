@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 import {AuthenticationService} from '../shared/services/authentication.service';
 import {User} from '../shared/models/user';
 import {AdminSdkService} from '../shared/services/admin-sdk.service';
+import {OffcanvasService} from '../shared/services/offcanvas.service';
 
 @Component({
   selector: 'app-registration',
@@ -14,7 +15,8 @@ export class RegistrationPage implements OnInit {
     newUser: User = new User();
   constructor( public authService: AuthenticationService,
                public adminSdkService: AdminSdkService,
-               public router: Router) { }
+               public router: Router,
+               public offCanvas: OffcanvasService) { }
 
   ngOnInit() {
   }
