@@ -57,7 +57,8 @@ const routes: Routes = [
   {
     path: 'all-users',
     loadChildren: () => import('./all-users/all-users.module').then( m => m.AllUsersPageModule)
-  },  {
+  },
+  {
     path: 'about-us',
     loadChildren: () => import('./about-us/about-us.module').then( m => m.AboutUsPageModule)
   },
@@ -65,10 +66,6 @@ const routes: Routes = [
     path: 'upload-profile-img',
     loadChildren: () => import('./upload-profile-img/upload-profile-img.module').then( m => m.UploadProfileImgPageModule)
   }
-
-
-
-
 
 ];
 
